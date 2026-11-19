@@ -1,4 +1,4 @@
-# *Weather Ensemble Analyzer*
+# *Weather Aggregator*
 
 **Proposta di progetto — Progettazione, Algoritmi e Computabilità (a.a. 2026/27)**
 

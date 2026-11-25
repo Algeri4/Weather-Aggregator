@@ -60,15 +60,35 @@ Integreremo ogni fonte con un adattatore dedicato, così da poter aggiungere nuo
 
 Definiremo nel dettaglio l'architettura nell'iterazione 0 del processo agile AMDD tramite diagrammi UML e Architecture Decision Records (ADR).
 
-## Documentazione e Pianificazione
+## 6. Stack tecnologico e tool chain
+In accordo con la decisione architetturale **ADR-001**, il progetto adotta lo stack **Python + Django**, mantenendo il layer di dominio (*Acquisizione*, *Normalizzazione* e *Motore di analisi*) disaccoppiato dal framework web.
+
+**Stack tecnologico:**
+* **Linguaggio e runtime:** Python 3.12+
+* **Framework web e persistenza:** Django (routing, template HTML, ORM su SQLite/PostgreSQL e caching per rispettare i rate-limit delle API esterne)
+* **Comunicazione e dati:** API REST/JSON (`requests`) e librerie Python per parsing ed elaborazione statistica
+* **Visualizzazione:** HTML5/CSS3 con template Django e grafici interattivi su browser (es. Chart.js)
+
+**Tool chain:**
+* **Modellazione UML e documentazione:** PlantUML (sorgenti `.puml` + immagini generate)
+* **Repository e code review:** Git e GitHub (branch e Pull Request collegate ai requisiti)
+* **Gestione dipendenze e ambiente:** `venv` + `pip` (`requirements.txt`)
+* **Test unità, integrazione e API:** `pytest`, `pytest-django`, `responses` (mock HTTP) e Postman
+* **Copertura dei test:** `pytest-cov` (`coverage.py`)
+* **Analisi statica e metriche di qualità:** `Ruff` (linting/stile) e `Radon` (complessità ciclomatica e indice di manutenibilità)
+* **Pipeline CI/CD:** GitHub Actions
+* **Distribuzione ed esecuzione:** Docker e Docker Compose
+
+## 7. Tipologia di client
+Il sistema sarà sviluppato come **applicazione web** accessibile via browser (layout responsive per desktop e mobile), senza necessità di installare client nativi. Tramite l'interfaccia web l'utente potrà ricercare una località, impostare l'intervallo temporale e consultare la previsione aggregata, il confronto tra le diverse fonti, l'indice di concordanza, le eventuali anomalie e l'andamento temporale tramite tabelle e grafici.
+
+## 8. Documentazione e Pianificazione
 
 **[Roadmap dei requisiti per le iterazioni e ADM](https://docs.google.com/spreadsheets/d/10ADHtKi5Zg1J3i9NpSl39cSRpWYiTWRaKsadT5ev3OQ/edit?usp=sharing)**
 
-## 6. Aspetti da definire
+## X. Aspetti da definire
 
-I seguenti aspetti saranno definiti dopo l'approvazione della proposta:
+I seguenti aspetti saranno definiti a breve:
 
-- stack tecnologico e tool chain;
-- tipologia di client (web, mobile o desktop);
 - insieme iniziale delle variabili meteorologiche;
 - ripartizione dei ruoli all'interno del team.

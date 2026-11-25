@@ -60,6 +60,10 @@ Integreremo ogni fonte con un adattatore dedicato, così da poter aggiungere nuo
 
 Definiremo nel dettaglio l'architettura nell'iterazione 0 del processo agile AMDD tramite diagrammi UML e Architecture Decision Records (ADR).
 
+## Documentazione e Pianificazione
+
+**[Roadmap dei requisiti per le iterazioni e ADM]https://docs.google.com/spreadsheets/d/10ADHtKi5Zg1J3i9NpSl39cSRpWYiTWRaKsadT5ev3OQ/edit?usp=sharing
+
 ## 6. Aspetti da definire
 
 I seguenti aspetti saranno definiti dopo l'approvazione della proposta:
